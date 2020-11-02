@@ -36,7 +36,7 @@ const Header: React.FC<Props> = ({ siteTitle }) => (
 )
 
 Header.propTypes = {
-  siteTitle: PropTypes.string,
+  siteTitle: PropTypes.string.isRequired,
 }
 
 Header.defaultProps = {

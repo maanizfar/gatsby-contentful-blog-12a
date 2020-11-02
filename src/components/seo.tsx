@@ -9,20 +9,20 @@ interface Props {
   meta?: []
 }
 
-const SEO: React.FC<Props> = ({ description, lang, meta, title }) => {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-          }
-        }
+const query = graphql`
+  query MetaDataQuery {
+    site {
+      siteMetadata {
+        title
+        description
+        author
       }
-    `
-  )
+    }
+  }
+`
+
+const SEO: React.FC<Props> = ({ description, lang, meta, title }) => {
+  const { site } = useStaticQuery(query)
 
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
