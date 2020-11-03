@@ -10,6 +10,7 @@ const BlogList = () => {
     <ul>
       {data.allContentfulBlogPost.edges.map(edge => (
         <BlogListItem
+          key={edge.node.slug}
           title={edge.node.title}
           slug={edge.node.slug}
           featuredImage={edge.node.featuredImage?.fluid?.src}

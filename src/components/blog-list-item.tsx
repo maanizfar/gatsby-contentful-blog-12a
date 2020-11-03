@@ -27,7 +27,11 @@ const BlogListItem: React.FC<Props> = ({
       </Link>
       <p>{publishedDate}</p>
       <p>{excerpt}</p>
-      {featuredImage && title && <Link to={`/${slug}`}><img src={featuredImage} alt={title} /></Link>}
+      {featuredImage && title && (
+        <Link to={`/${slug}`}>
+          <img src={featuredImage} alt={title} />
+        </Link>
+      )}
       <h6>{author}</h6>
       {authorAvatar && author && <img src={authorAvatar} alt={author} />}
     </div>
