@@ -26602,6 +26602,16 @@
               "defaultValue": null
             },
             {
+              "name": "description",
+              "description": "",
+              "type": {
+                "kind": "INPUT_OBJECT",
+                "name": "contentfulBlogPostBodyRichTextNodeContentDataTargetFieldsDescriptionFilterInput",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
               "name": "file",
               "description": "",
               "type": {
@@ -26619,6 +26629,27 @@
         {
           "kind": "INPUT_OBJECT",
           "name": "contentfulBlogPostBodyRichTextNodeContentDataTargetFieldsTitleFilterInput",
+          "description": null,
+          "fields": null,
+          "inputFields": [
+            {
+              "name": "en_US",
+              "description": "",
+              "type": {
+                "kind": "INPUT_OBJECT",
+                "name": "StringQueryOperatorInput",
+                "ofType": null
+              },
+              "defaultValue": null
+            }
+          ],
+          "interfaces": null,
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "INPUT_OBJECT",
+          "name": "contentfulBlogPostBodyRichTextNodeContentDataTargetFieldsDescriptionFilterInput",
           "description": null,
           "fields": null,
           "inputFields": [
@@ -26799,6 +26830,16 @@
           "fields": null,
           "inputFields": [
             {
+              "name": "marks",
+              "description": "",
+              "type": {
+                "kind": "INPUT_OBJECT",
+                "name": "contentfulBlogPostBodyRichTextNodeContentContentMarksFilterListInput",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
               "name": "value",
               "description": "",
               "type": {
@@ -26810,6 +26851,110 @@
             },
             {
               "name": "nodeType",
+              "description": "",
+              "type": {
+                "kind": "INPUT_OBJECT",
+                "name": "StringQueryOperatorInput",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "content",
+              "description": "",
+              "type": {
+                "kind": "INPUT_OBJECT",
+                "name": "contentfulBlogPostBodyRichTextNodeContentContentContentFilterListInput",
+                "ofType": null
+              },
+              "defaultValue": null
+            }
+          ],
+          "interfaces": null,
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "INPUT_OBJECT",
+          "name": "contentfulBlogPostBodyRichTextNodeContentContentMarksFilterListInput",
+          "description": null,
+          "fields": null,
+          "inputFields": [
+            {
+              "name": "elemMatch",
+              "description": "",
+              "type": {
+                "kind": "INPUT_OBJECT",
+                "name": "contentfulBlogPostBodyRichTextNodeContentContentMarksFilterInput",
+                "ofType": null
+              },
+              "defaultValue": null
+            }
+          ],
+          "interfaces": null,
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "INPUT_OBJECT",
+          "name": "contentfulBlogPostBodyRichTextNodeContentContentMarksFilterInput",
+          "description": null,
+          "fields": null,
+          "inputFields": [
+            {
+              "name": "type",
+              "description": "",
+              "type": {
+                "kind": "INPUT_OBJECT",
+                "name": "StringQueryOperatorInput",
+                "ofType": null
+              },
+              "defaultValue": null
+            }
+          ],
+          "interfaces": null,
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "INPUT_OBJECT",
+          "name": "contentfulBlogPostBodyRichTextNodeContentContentContentFilterListInput",
+          "description": null,
+          "fields": null,
+          "inputFields": [
+            {
+              "name": "elemMatch",
+              "description": "",
+              "type": {
+                "kind": "INPUT_OBJECT",
+                "name": "contentfulBlogPostBodyRichTextNodeContentContentContentFilterInput",
+                "ofType": null
+              },
+              "defaultValue": null
+            }
+          ],
+          "interfaces": null,
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "INPUT_OBJECT",
+          "name": "contentfulBlogPostBodyRichTextNodeContentContentContentFilterInput",
+          "description": null,
+          "fields": null,
+          "inputFields": [
+            {
+              "name": "nodeType",
+              "description": "",
+              "type": {
+                "kind": "INPUT_OBJECT",
+                "name": "StringQueryOperatorInput",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "value",
               "description": "",
               "type": {
                 "kind": "INPUT_OBJECT",
@@ -28375,6 +28520,18 @@
               "deprecationReason": null
             },
             {
+              "name": "description",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "OBJECT",
+                "name": "contentfulBlogPostBodyRichTextNodeContentDataTargetFieldsDescription",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
               "name": "file",
               "description": null,
               "args": [],
@@ -28395,6 +28552,29 @@
         {
           "kind": "OBJECT",
           "name": "contentfulBlogPostBodyRichTextNodeContentDataTargetFieldsTitle",
+          "description": null,
+          "fields": [
+            {
+              "name": "en_US",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            }
+          ],
+          "inputFields": null,
+          "interfaces": [],
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "OBJECT",
+          "name": "contentfulBlogPostBodyRichTextNodeContentDataTargetFieldsDescription",
           "description": null,
           "fields": [
             {
@@ -28573,6 +28753,22 @@
           "description": null,
           "fields": [
             {
+              "name": "marks",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "contentfulBlogPostBodyRichTextNodeContentContentMarks",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
               "name": "value",
               "description": null,
               "args": [],
@@ -28586,6 +28782,80 @@
             },
             {
               "name": "nodeType",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "content",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "contentfulBlogPostBodyRichTextNodeContentContentContent",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            }
+          ],
+          "inputFields": null,
+          "interfaces": [],
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "OBJECT",
+          "name": "contentfulBlogPostBodyRichTextNodeContentContentMarks",
+          "description": null,
+          "fields": [
+            {
+              "name": "type",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            }
+          ],
+          "inputFields": null,
+          "interfaces": [],
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "OBJECT",
+          "name": "contentfulBlogPostBodyRichTextNodeContentContentContent",
+          "description": null,
+          "fields": [
+            {
+              "name": "nodeType",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "value",
               "description": null,
               "args": [],
               "type": {
@@ -33342,6 +33612,18 @@
               "deprecationReason": null
             },
             {
+              "name": "content___content___marks",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "content___content___marks___type",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
               "name": "content___content___value",
               "description": null,
               "isDeprecated": false,
@@ -33349,6 +33631,24 @@
             },
             {
               "name": "content___content___nodeType",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "content___content___content",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "content___content___content___nodeType",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "content___content___content___value",
               "description": null,
               "isDeprecated": false,
               "deprecationReason": null
@@ -38132,6 +38432,12 @@
               "deprecationReason": null
             },
             {
+              "name": "body___content___content___marks",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
               "name": "body___content___content___value",
               "description": null,
               "isDeprecated": false,
@@ -38139,6 +38445,12 @@
             },
             {
               "name": "body___content___content___nodeType",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "body___content___content___content",
               "description": null,
               "isDeprecated": false,
               "deprecationReason": null
@@ -38888,6 +39200,12 @@
               "deprecationReason": null
             },
             {
+              "name": "childContentfulBlogPostBodyRichTextNode___content___content___marks",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
               "name": "childContentfulBlogPostBodyRichTextNode___content___content___value",
               "description": null,
               "isDeprecated": false,
@@ -38895,6 +39213,12 @@
             },
             {
               "name": "childContentfulBlogPostBodyRichTextNode___content___content___nodeType",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "childContentfulBlogPostBodyRichTextNode___content___content___content",
               "description": null,
               "isDeprecated": false,
               "deprecationReason": null
@@ -43598,7 +43922,11 @@
         {
           "name": "skip",
           "description": "Directs the executor to skip this field or fragment when the `if` argument is true.",
-          "locations": ["FIELD", "FRAGMENT_SPREAD", "INLINE_FRAGMENT"],
+          "locations": [
+            "FIELD",
+            "FRAGMENT_SPREAD",
+            "INLINE_FRAGMENT"
+          ],
           "args": [
             {
               "name": "if",
@@ -43619,7 +43947,11 @@
         {
           "name": "include",
           "description": "Directs the executor to include this field or fragment only when the `if` argument is true.",
-          "locations": ["FIELD", "FRAGMENT_SPREAD", "INLINE_FRAGMENT"],
+          "locations": [
+            "FIELD",
+            "FRAGMENT_SPREAD",
+            "INLINE_FRAGMENT"
+          ],
           "args": [
             {
               "name": "if",
@@ -43640,7 +43972,10 @@
         {
           "name": "deprecated",
           "description": "Marks an element of a GraphQL schema as no longer supported.",
-          "locations": ["FIELD_DEFINITION", "ENUM_VALUE"],
+          "locations": [
+            "FIELD_DEFINITION",
+            "ENUM_VALUE"
+          ],
           "args": [
             {
               "name": "reason",
@@ -43657,7 +43992,9 @@
         {
           "name": "default",
           "description": "Provides default value for input field.",
-          "locations": ["INPUT_FIELD_DEFINITION"],
+          "locations": [
+            "INPUT_FIELD_DEFINITION"
+          ],
           "args": [
             {
               "name": "value",
@@ -43678,7 +44015,9 @@
         {
           "name": "dateformat",
           "description": "Add date formatting options.",
-          "locations": ["FIELD_DEFINITION"],
+          "locations": [
+            "FIELD_DEFINITION"
+          ],
           "args": [
             {
               "name": "formatString",
@@ -43725,7 +44064,9 @@
         {
           "name": "link",
           "description": "Link to node by foreign-key relation.",
-          "locations": ["FIELD_DEFINITION"],
+          "locations": [
+            "FIELD_DEFINITION"
+          ],
           "args": [
             {
               "name": "by",
@@ -43766,7 +44107,9 @@
         {
           "name": "fileByRelativePath",
           "description": "Link to File node by relative path.",
-          "locations": ["FIELD_DEFINITION"],
+          "locations": [
+            "FIELD_DEFINITION"
+          ],
           "args": [
             {
               "name": "from",
@@ -43783,7 +44126,9 @@
         {
           "name": "proxy",
           "description": "Proxy resolver from another field.",
-          "locations": ["FIELD_DEFINITION"],
+          "locations": [
+            "FIELD_DEFINITION"
+          ],
           "args": [
             {
               "name": "from",
@@ -43818,7 +44163,9 @@
         {
           "name": "infer",
           "description": "Infer field types from field values.",
-          "locations": ["OBJECT"],
+          "locations": [
+            "OBJECT"
+          ],
           "args": [
             {
               "name": "noDefaultResolvers",
@@ -43835,7 +44182,9 @@
         {
           "name": "dontInfer",
           "description": "Do not infer field types from field values.",
-          "locations": ["OBJECT"],
+          "locations": [
+            "OBJECT"
+          ],
           "args": [
             {
               "name": "noDefaultResolvers",
@@ -43852,7 +44201,9 @@
         {
           "name": "mimeTypes",
           "description": "Define the mime-types handled by this type.",
-          "locations": ["OBJECT"],
+          "locations": [
+            "OBJECT"
+          ],
           "args": [
             {
               "name": "types",
@@ -43881,7 +44232,9 @@
         {
           "name": "childOf",
           "description": "Define parent-child relations between types. This is used to add `child*` or `children*` convenience fields like `childImageSharp`.",
-          "locations": ["OBJECT"],
+          "locations": [
+            "OBJECT"
+          ],
           "args": [
             {
               "name": "mimeTypes",
@@ -43946,7 +44299,9 @@
         {
           "name": "nodeInterface",
           "description": "Adds root query fields for an interface. All implementing types must also implement the Node interface.",
-          "locations": ["INTERFACE"],
+          "locations": [
+            "INTERFACE"
+          ],
           "args": []
         }
       ]

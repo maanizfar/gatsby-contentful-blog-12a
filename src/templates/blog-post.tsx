@@ -5,39 +5,59 @@ import Layout from "../components/layout"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { BlogPostDataQuery } from "./__generated__/BlogPostDataQuery"
 import SEO from "../components/seo"
+import { BLOCKS } from "@contentful/rich-text-types"
+
+import styles from "./blog-post.module.css"
 
 const BlogPost: React.FC<PageProps<BlogPostDataQuery>> = ({ data }) => {
   const options = {
     renderNode: {
-      "embedded-asset-block": node => {
+      [BLOCKS.EMBEDDED_ASSET]: node => {
         const alt = node.data.target.fields.title["en-US"]
         const url = node.data.target.fields.file["en-US"].url
-        return <img alt={alt} src={url} />
+        return <img alt={alt} src={url} className={styles.embeddedImages} />
       },
+      [BLOCKS.PARAGRAPH]: (node, children) => (
+        <p style={{ marginBottom: "1rem" }}>{children}</p>
+      ),
     },
   }
 
   return (
     <Layout>
       <SEO title={data.contentfulBlogPost?.title || ""} />
-      <Link to="/">back</Link>
-      <h1>{data.contentfulBlogPost?.title}</h1>
-      <p>{data.contentfulBlogPost?.publishedDate}</p>
-      {data.contentfulBlogPost?.featuredImage && (
-        <Img
-          fluid={data.contentfulBlogPost?.featuredImage?.fluid as FluidObject}
-        />
-      )}
+      <div className={styles.container}>
+        <h1 className={styles.title}>{data.contentfulBlogPost?.title}</h1>
+        <p className={styles.date}>{data.contentfulBlogPost?.publishedDate}</p>
+        {data.contentfulBlogPost?.featuredImage && (
+          <Img
+            fluid={data.contentfulBlogPost?.featuredImage?.fluid as FluidObject}
+            className={styles.featuredImage}
+          />
+        )}
 
-      {documentToReactComponents(data.contentfulBlogPost?.body?.json, options)}
+        {documentToReactComponents(
+          data.contentfulBlogPost?.body?.json,
+          options
+        )}
 
-      <Img
-        fixed={
-          data.contentfulBlogPost?.author?.profilePicture?.fixed as FixedObject
-        }
-      />
-      <h6>{data.contentfulBlogPost?.author?.name}</h6>
-      <p>{data.contentfulBlogPost?.author?.bio?.bio}</p>
+        <div className={styles.authorContainer}>
+          <Img
+            fluid={
+              data.contentfulBlogPost?.author?.profilePicture
+                ?.fluid as FluidObject
+            }
+            style={{ width: "35%" }}
+          />
+          <div className={styles.authorInfo}>
+            <p style={{ fontSize: "small" }}>ABOUT AUTHOR</p>
+            <h3 style={{ margin: "4px 0", fontWeight: 600 }}>
+              {data.contentfulBlogPost?.author?.name}
+            </h3>
+            <p>{data.contentfulBlogPost?.author?.bio?.bio}</p>
+          </div>
+        </div>
+      </div>
     </Layout>
   )
 }
@@ -63,8 +83,8 @@ export const query = graphql`
           bio
         }
         profilePicture {
-          fixed(width: 150) {
-            ...GatsbyContentfulFixed
+          fluid(maxWidth: 150) {
+            ...GatsbyContentfulFluid
           }
         }
       }

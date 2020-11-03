@@ -8,13 +8,13 @@
 // ====================================================
 
 export interface SiteTitleQuery_site_siteMetadata {
-  title: string | null
+  title: string | null;
 }
 
 export interface SiteTitleQuery_site {
-  siteMetadata: SiteTitleQuery_site_siteMetadata | null
+  siteMetadata: SiteTitleQuery_site_siteMetadata | null;
 }
 
 export interface SiteTitleQuery {
-  site: SiteTitleQuery_site | null
+  site: SiteTitleQuery_site | null;
 }

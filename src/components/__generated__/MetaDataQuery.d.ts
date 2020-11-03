@@ -8,15 +8,15 @@
 // ====================================================
 
 export interface MetaDataQuery_site_siteMetadata {
-  title: string | null
-  description: string | null
-  author: string | null
+  title: string | null;
+  description: string | null;
+  author: string | null;
 }
 
 export interface MetaDataQuery_site {
-  siteMetadata: MetaDataQuery_site_siteMetadata | null
+  siteMetadata: MetaDataQuery_site_siteMetadata | null;
 }
 
 export interface MetaDataQuery {
-  site: MetaDataQuery_site | null
+  site: MetaDataQuery_site | null;
 }
